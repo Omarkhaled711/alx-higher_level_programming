@@ -13,6 +13,8 @@ int check_cycle(listint_t *list)
 
 	ptr1 = list;
 	ptr2 = list;
+	if (list == NULL)
+		return (0);
 	while (ptr2->next != NULL)
 	{
 		ptr1 = ptr1->next;
