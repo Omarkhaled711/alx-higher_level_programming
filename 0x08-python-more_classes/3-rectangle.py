@@ -55,4 +55,4 @@ class Rectangle:
         for i in range(self.height):
             st += '#' * self.width
             st += '\n'
-        return st
+        return st.strip()
