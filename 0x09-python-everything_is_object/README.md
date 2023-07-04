@@ -6,15 +6,65 @@
 * 3-answer.txt: do a, and b point to the same object: ">>> a = 89, b = 89"
 * 4-answer.txt: do a, and b point to the same object: ">>> a = 89, b = a"
 * 5-answer.txt: do a, and b point to the same object: ">>> a = 89, b = a + 1"
-* 6-anwer.txt: print the output of the following code  
+* 6-answer.txt: print the output of the following code  
 ```python
 s1 = "Best School"
 s2 = s1
 print(s1 == s2)
 ```
-* 7-anwer.txt: print the output of the following code   
+* 7-answer.txt: print the output of the following code   
 ```python
 s1 = "Best School"
 s2 = s1
 print(s1 is s2)
+```
+* 8-answer.txt: print the output of the following code  
+```python
+s1 = "Best School"
+s2 = "Best school"
+print(s1 == s2)
+```
+* 9-answer.txt: print the output of the following code  
+```python
+s1 = "Best School"
+s2 = "Best school"
+print(s1 is s2)
+```
+* 10-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = [1, 2, 3] 
+print(l1 == l2)
+```
+* 11-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = [1, 2, 3] 
+print(l1 is l2)
+```
+* 12-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = l1
+print(l1 == l2)
+```
+* 13-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = l2
+print(l1 is l2)
+```
+* 14-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = l1
+l1.append(4)
+print(l2)
+```
+* 15-answer.txt: print the output of the following code  
+```python
+l1 = [1, 2, 3]
+l2 = l2
+l1 = l1 + [4]
+print(l2)
 ```
