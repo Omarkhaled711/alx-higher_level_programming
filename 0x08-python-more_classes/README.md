@@ -7,3 +7,4 @@
 * 4-rectangle.py: added __repr__method
 * 5-rectangle.py: added __del__method
 * 6-rectangle.py: added class attribute (number_of_instances)
+* 7-rectangle.py: added class attribut (print_symbol)
