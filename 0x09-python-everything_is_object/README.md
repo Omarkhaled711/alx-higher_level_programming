@@ -133,4 +133,48 @@ id(a)
 a += [5]
 id(a)
 ```
-* 100-magic_string.py: a function magic_string() that returns a string “BestSchool” n times the number of the iteration (following the format fount in 100-main.py)
+* 100-magic_string.py: a function magic_string() that returns a string “BestSchool” n times the number of the iteration (following the format fount in 100-main.py)  
+* 103: Assuming we are using a CPython implementation of Python3 with default options/configuration:
+```python
+a = 1
+b = 1
+```  
+How many int objects are created by the execution of the first line of the script? (103-line1.txt)  
+How many int objects are created by the execution of the second line of the script (103-line2.txt)
+
+* 104:  
+```python
+a = 1024
+b = 1024
+del a
+del b
+c = 1024
+```
+How many int objects are created by the execution of the first line of the script? (104-line1.txt)  
+How many int objects are created by the execution of the second line of the script (104-line2.txt)  
+After the execution of line 3, is the int object pointed by a deleted? Answer with Yes or No (104-line3.txt)  
+After the execution of line 4, is the int object pointed by b deleted? Answer with Yes or No (104-line4.txt)  
+How many int objects are created by the execution of the last line of the script (104-line5.txt)  
+
+* 105: Assuming we are using a CPython implementation of Python3 with default options/configuration:  
+```python
+print("I")
+print("Love")
+print("Python")
+```
+Before the execution of line 2 (print("Love")), how many int objects have been created and are still in memory? (105-line1.txt)
+
+* 106:  
+```python
+a = "SCHL"
+b = "SCHL"
+del a
+del b
+c = "SCHL"
+```
+
+How many string objects are created by the execution of the first line of the script? (106-line1.txt)  
+How many string objects are created by the execution of the second line of the script (106-line2.txt)  
+After the execution of line 3, is the string object pointed by a deleted? Answer with Yes or No (106-line3.txt)  
+After the execution of line 4, is the string object pointed by b deleted? Answer with Yes or No (106-line4.txt)  
+How many string objects are created by the execution of the last line of the script (106-line5.txt)  
