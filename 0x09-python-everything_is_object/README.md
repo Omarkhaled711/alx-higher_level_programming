@@ -133,3 +133,4 @@ id(a)
 a += [5]
 id(a)
 ```
+* 100-magic_string.py: a function magic_string() that returns a string “BestSchool” n times the number of the iteration (following the format fount in 100-main.py)
