@@ -134,6 +134,9 @@ a += [5]
 id(a)
 ```
 * 100-magic_string.py: a function magic_string() that returns a string “BestSchool” n times the number of the iteration (following the format fount in 100-main.py)  
+
+* 101-locked_class.py: a class LockedClass with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called first_name.
+
 * 103: Assuming we are using a CPython implementation of Python3 with default options/configuration:
 ```python
 a = 1
