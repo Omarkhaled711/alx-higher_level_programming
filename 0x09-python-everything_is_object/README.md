@@ -119,3 +119,17 @@ a = ()
 b = ()
 a is b
 ```
+* 27-answer.txt: will the id of 'a' change?  
+```python
+a = [1, 2, 3, 4]
+id(a)
+a = a + [5]
+id(a)
+```
+* 28-answer.txt: will the id of 'a' change?  
+```python
+a = [1, 2, 3, 4]
+id(a)
+a += [5]
+id(a)
+```
