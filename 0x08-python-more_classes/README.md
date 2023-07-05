@@ -6,3 +6,4 @@
 * 3-rectangle.py: added __str__ method
 * 4-rectangle.py: added __repr__method
 * 5-rectangle.py: added __del__method
+* 6-rectangle.py: added class attribute (number_of_instances)
