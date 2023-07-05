@@ -96,4 +96,26 @@ l2 = [4, 5, 6]
 assign_value(l1, l2)
 print(l1)
 ```
-* 19-copy_list.py: create a function with max 3-line long
+* 19-copy_list.py: create a function with max 3-line long to copy a list
+* 20-answer.txt: is (a) a tuple?  ( >>> a = () )
+* 21-answer.txt: is (a) a tuple? ( >>> a = (1, 2) )
+* 22-answer.txt: is (a) a tuple? ( >>> a = (1) )
+* 23-answer.txt: is (a) a tuple? ( >>> a = (1, ) )
+* 24-answer.txt: print the output of the following code  
+```python
+a = (1)
+b = (1)
+a is b
+```
+* 25-answer.txt: print the output of the following code  
+```python
+a = (1, 2)
+b = (1, 2)
+a is b
+```
+* 26-answer.txt: print the output of the following code  
+```python
+a = ()
+b = ()
+a is b
+```
