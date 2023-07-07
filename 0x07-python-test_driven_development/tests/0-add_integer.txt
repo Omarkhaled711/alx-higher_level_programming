@@ -47,3 +47,15 @@ The Testing module for 'add_integer' using doctest
 
 	>>> type(add_integer(5, 10))
 	<class 'int'>
+
+	""" float overflow, and NaN values """
+
+	>>> add_integer(2.7976931348623157e+308, 10)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('nan'), 10)
+	Traceback (most recent call last):
+	...
+	ValueError: cannot convert float NaN to integer
