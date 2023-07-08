@@ -1,0 +1,27 @@
+""" Testing text_identation() function """
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	--- Normal Case ---
+	>>> text_indentation('He said: What? I replied: ok.')
+	He said:
+	<BLANKLINE>
+	 What?
+	<BLANKLINE>
+	 I replied:
+	<BLANKLINE>
+	 ok.
+	<BLANKLINE>
+
+	--- Argument not a string ---
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
+	--- No Argument ---
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	...
+	TypeError: text must be a string
+
