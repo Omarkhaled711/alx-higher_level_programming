@@ -1,0 +1,14 @@
+""" Testing 1-my_list.py """
+
+>>> MyList = __import__('1-my_list').MyList
+
+
+	--- Normal Case ---
+	>>> my_list = MyList([1, 4, 5, 2, 3])
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+	--- Test issubclass ---
+	>>> issubclass(MyList, list)
+	True
+
