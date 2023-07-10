@@ -8,7 +8,15 @@
 	>>> my_list.print_sorted()
 	[1, 2, 3, 4, 5]
 
+	>>> print(my_list)
+	[1, 4, 5, 2, 3]
+
 	--- Test issubclass ---
 	>>> issubclass(MyList, list)
 	True
 
+	--- Test isinstance ---
+	>>> isinstance(MyList, list)
+	False
+	>>> isinstance(my_list, list)
+	True
