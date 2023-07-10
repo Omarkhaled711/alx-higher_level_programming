@@ -11,6 +11,21 @@
 	>>> print(my_list)
 	[1, 4, 5, 2, 3]
 
+	--- special cases (empty list, None arg, int arg)---
+	>>> my_list2 = MyList([])
+	>>> my_list2.print_sorted()
+	[]
+
+	>>> my_list2 = MyList(5)
+	Traceback (most recent call last):
+	...
+	TypeError: 'int' object is not iterable
+
+	>>> my_list2 = MyList(None)
+	Traceback (most recent call last):
+	...
+	TypeError: 'NoneType' object is not iterable
+
 	--- Test issubclass ---
 	>>> issubclass(MyList, list)
 	True
