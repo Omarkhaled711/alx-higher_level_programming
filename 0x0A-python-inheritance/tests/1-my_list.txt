@@ -20,3 +20,10 @@
 	False
 	>>> isinstance(my_list, list)
 	True
+
+	--- Test Type ---
+	>>> type(my_list) == MyList
+	True
+	
+	>>> type(my_list) == list
+	False

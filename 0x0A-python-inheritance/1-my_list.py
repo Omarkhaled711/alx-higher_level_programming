@@ -17,9 +17,5 @@ class MyList(list):
         """
         This method prints the list in an ascending order,
         without affecting the original list.
-        Example:
-        my_list = MyList([1, 5, 3])
-        print_sorted(my_list)
-        [1, 3, 5]
         """
         print(sorted(self))
