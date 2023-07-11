@@ -12,3 +12,5 @@
 * 7-base_geometry.py: Public instance method: def integer_validator(self, name, value)
 * 8-rectangle.py: a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
 * 9-rectangle.py: implementing the area function, implementing __str__ function
+* 10-square.py: creating a subclass Square from the class Rectangle
+* 11-square.py: customized the __str__ function in Square Class

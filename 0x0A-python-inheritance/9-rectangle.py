@@ -31,8 +31,8 @@ class Rectangle(BaseGeometry):
         """
         return self.__width * self.__height
 
-    def __str__(self):
+    def __str__(self, name='Rectangle'):
         """
         returns an informal description of the Rectangle objects
         """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        return f"[{name}] {self.__width}/{self.__height}"
