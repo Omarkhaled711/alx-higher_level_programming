@@ -17,7 +17,7 @@ class Square(Rectangle):
         init method: set the private attribute size to the passed
         argument size after validating that it's +ve
         """
-        super().__init__(size, size)
+        super().__init__(size, size, "size", "size")
         self.__size = size
 
     def area(self):

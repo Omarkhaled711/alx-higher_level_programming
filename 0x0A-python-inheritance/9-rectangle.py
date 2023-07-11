@@ -13,14 +13,14 @@ class Rectangle(BaseGeometry):
     needed to create a Rectangle object
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width, height, name_1="width", name_2="height"):
         """
         init method that sets the private attributes (width, height)
         to the passed args width and height after validating that the
         passed args are +ve
         """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        self.integer_validator(name_1, width)
+        self.integer_validator(name_2, height)
         self.__width = width
         self.__height = height
 
