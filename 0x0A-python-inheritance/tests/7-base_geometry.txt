@@ -28,7 +28,7 @@
 	...
 	TypeError: something must be an integer
 
-
+	
 	--- value is string ---
 	>>> bg.integer_validator("something", "num")
 	Traceback (most recent call last):
@@ -40,6 +40,14 @@
 	Traceback (most recent call last):
 	...
 	TypeError: something must be an integer
+
+	--- value is bool (sub-class of int) ---
+	>>> bg.integer_validator("something", True)
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+
 
 	--- Testing area() ---
 	>>> bg.area()

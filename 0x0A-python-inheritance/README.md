@@ -11,3 +11,4 @@
 * 6-base_geometry.py: adds Public instance method to BaseGeometry class: def area(self): that raises an Exception with the message area() is not implemented
 * 7-base_geometry.py: Public instance method: def integer_validator(self, name, value)
 * 8-rectangle.py: a class Rectangle that inherits from BaseGeometry (7-base_geometry.py).
+* 9-rectangle.py: implementing the area function, implementing __str__ function
