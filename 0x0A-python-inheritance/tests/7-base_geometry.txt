@@ -1,0 +1,32 @@
+""" Testing 7-base_geometry.py """
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	--- Normal Case ---
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("something", 5)
+
+	--- zero input ---
+	>>> bg.integer_validator("something", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: something must be greater than 0
+
+	--- -ve input ---
+	>>> bg.integer_validator("something", -2)
+	Traceback (most recent call last):
+	...
+	ValueError: something must be greater than 0
+
+	--- value not an integer ---
+	>>> bg.integer_validator("something", "num")
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
+	--- None argument ---
+	>>> bg.integer_validator("something", None)
+	Traceback (most recent call last):
+	...
+	TypeError: something must be an integer
+
