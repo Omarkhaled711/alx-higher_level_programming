@@ -9,6 +9,8 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """
     This is a sub-class of the class Rectangle
+    It will be used to define the specific attributes and methods
+    needed to create a Rectangle object
     """
     def __init__(self, size):
         """
@@ -19,7 +21,8 @@ class Square(Rectangle):
 
     def area(self):
         """
-        Implementing the area for the class Square
+        Implementing the area for the class Square using
+        the parent implementation
         """
         return super().area()
 
