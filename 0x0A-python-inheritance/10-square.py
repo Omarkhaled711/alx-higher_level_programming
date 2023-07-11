@@ -18,6 +18,7 @@ class Square(Rectangle):
         argument size after validating that it's +ve
         """
         super().__init__(size, size)
+        self.__size = size
 
     def area(self):
         """
