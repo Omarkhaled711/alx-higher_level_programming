@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-import json
-
 """
 This module is part of alx python tasks.
 It contains only one function: save_to_json_file(my_obj, filename)
 """
+import json
 
 
 def save_to_json_file(my_obj, filename):
