@@ -12,3 +12,4 @@
 * 9-student.py: a class Student that defines a student 
 * 10-student.py: Extending 9-student.py
 * 11-student.py: Extending 10-student.py
+* 12-pascal_triangle.py: a function that returns a list of lists of integers representing the Pascal’s triangle of n
