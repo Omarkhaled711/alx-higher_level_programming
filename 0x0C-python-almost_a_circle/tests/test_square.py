@@ -6,6 +6,7 @@ import unittest
 from unittest import mock
 from models.square import Square
 import json
+import os
 
 
 class TestSquare(unittest.TestCase):
@@ -18,6 +19,7 @@ class TestSquare(unittest.TestCase):
         # by the other id related tests
 
     def test_ids(self):
+        """Testing ids for square objects"""
         s1 = Square(5)
         s2 = Square(7)
         s3 = Square(5, 0, 0, 12)
@@ -143,6 +145,9 @@ class TestSquare(unittest.TestCase):
         """Testing load_from_file method from Square objects"""
         s1 = Square(10, 2, 8)
         s2 = Square(2)
+        if os.path.exists('Square.json'):
+            os.remove('Square.json')
+        self.assertEqual(Square.load_from_file(), [])
         list_Squares_input = [s1, s2]
         Square.save_to_file(list_Squares_input)
         list_Squares_output = Square.load_from_file()

@@ -53,6 +53,10 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """
+        A method that returns the dictionary
+        representation of a Square
+        """
         sq_dic = super().to_dictionary()
         sq_dic['size'] = sq_dic.pop('width')
         sq_dic.pop('height')

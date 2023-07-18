@@ -6,6 +6,7 @@ import unittest
 from unittest import mock
 from models.rectangle import Rectangle
 import json
+import os
 
 
 class TestRectangle(unittest.TestCase):
@@ -84,13 +85,43 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.width, 10)
         self.assertEqual(r1.height, 2)
 
-    def test_set_x_y(self):
+    def test_set_valid_x_y(self):
         """Test setting x and y with valid values"""
         r1 = Rectangle(5, 7)
         r1.x = 2
         r1.y = 3
         self.assertEqual(r1.x, 2)
         self.assertEqual(r1.y, 3)
+
+    def test_set_invalid_width_height(self):
+        """Testing setting invalid values for width and height"""
+        r1 = Rectangle(4, 6)
+        with self.assertRaises(ValueError):
+            r1.width = -2
+            r1.width = 0
+            r1.height = -2
+            r1.height = 0
+        with self.assertRaises(TypeError):
+            r1.width = True
+            r1.widht = 3.14
+            r1.width = 's'
+            r1.height = True
+            r1.height = 3.14
+            r1.height = 's'
+
+    def test_set_invalid_x_y(self):
+        """Testing setting x and y with invalid values"""
+        r1 = Rectangle(4, 6)
+        with self.assertRaises(ValueError):
+            r1.x = -2
+            r1.y = -2
+        with self.assertRaises(TypeError):
+            r1.x = True
+            r1.x = 3.14
+            r1.x = 's'
+            r1.y = True
+            r1.y = 3.14
+            r1.y = 's'
 
     def test_display(self):
         """Test the display method"""
@@ -179,6 +210,9 @@ class TestRectangle(unittest.TestCase):
         """Testing load_from_file method from rectangle objects"""
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
+        if os.path.exists('Rectangle.json'):
+            os.remove('Rectangle.json')
+        self.assertEqual(Rectangle.load_from_file(), [])
         list_rectangles_input = [r1, r2]
         Rectangle.save_to_file(list_rectangles_input)
         list_rectangles_output = Rectangle.load_from_file()

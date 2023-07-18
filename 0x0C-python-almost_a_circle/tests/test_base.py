@@ -10,6 +10,7 @@ class TestBase(unittest.TestCase):
     """ Test the  Base class """
 
     def setUp(self):
+        """setting up test cases for base class"""
         Base._Base__nb_objects = 0
         # this is to keep each test case separated, and not affect
         # by the other id related tests
@@ -43,6 +44,18 @@ class TestBase(unittest.TestCase):
         self.assertEqual(type(json_dictionary), str)
         self.assertEqual(Base.to_json_string([]), '[]')
         self.assertEqual(Base.to_json_string(None), '[]')
+
+    def test_from_json_string(self):
+        """Testing from_json_string method"""
+        list_input = [
+            {'id': 89, 'width': 10, 'height': 4},
+            {'id': 7, 'width': 1, 'height': 7}
+        ]
+        json_list_input = Base.to_json_string(list_input)
+        list_output = Base.from_json_string(json_list_input)
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(list_output, list_input)
+        self.assertEqual(Base.from_json_string([]), [])
 
     def test_create(self):
         """Test create method on base class"""
