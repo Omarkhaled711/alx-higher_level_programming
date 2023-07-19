@@ -34,11 +34,11 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s1.x, 3)
         self.assertEqual(s1.y, 2)
 
-    def test_invalid_height(self):
+    def test_invalid_size(self):
         """Test invalid size exceptions"""
         with self.assertRaises(ValueError):
-            Square(-2, 1, 2)
-            Square(0, 1, 2)
+            Square(-2)
+            Square(0)
         with self.assertRaises(TypeError):
             Square('1', 2, 3)
             Square(True, 2, 3)
@@ -125,6 +125,14 @@ class TestSquare(unittest.TestCase):
 
     def test_save_to_file(self):
         """Testing save_to_file method for Square class"""
+        Square.save_to_file([])
+        with open("Square.json", "r") as f:
+            out = json.load(f)
+        self.assertEqual(out, [])
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            out = json.load(f)
+        self.assertEqual(out, [])
         s1 = Square(10, 2, 8)
         s2 = Square(2)
         Square.save_to_file([s1, s2])

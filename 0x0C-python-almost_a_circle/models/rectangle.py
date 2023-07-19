@@ -116,6 +116,14 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    @classmethod
+    def dummy(cls):
+        """
+        A function that creates a dummy object to be updated within
+        create method using json data
+        """
+        return cls(10, 10)
+
     def to_dictionary(self):
         """returns a dictionary representation of rectangle objects"""
         return {

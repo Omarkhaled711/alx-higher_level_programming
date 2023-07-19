@@ -32,7 +32,7 @@ class Base:
         """
         if (list_dictionaries is None or len(list_dictionaries) == 0):
             return '[]'
-        return json.dumps(list_dictionaries)
+        return json.dumps(list_dictionaries, default=str)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -68,7 +68,7 @@ class Base:
                 id = dictionary['id']
                 return Base(id)
             return Base()
-        obj = cls(10, 10)
+        obj = cls.dummy()
         obj.update(**dictionary)
         return obj
 

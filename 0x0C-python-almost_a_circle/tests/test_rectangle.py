@@ -38,8 +38,8 @@ class TestRectangle(unittest.TestCase):
     def test_invalid_width(self):
         """Test invalid width exceptions"""
         with self.assertRaises(ValueError):
-            Rectangle(-2, 1, 2, 3)
-            Rectangle(0, 1, 2, 3)
+            Rectangle(-2, 1)
+            Rectangle(0, 1)
         with self.assertRaises(TypeError):
             Rectangle('width', 1, 2, 3)
             Rectangle(True, 1, 2, 3)
@@ -49,8 +49,8 @@ class TestRectangle(unittest.TestCase):
     def test_invalid_height(self):
         """Test invalid height exceptions"""
         with self.assertRaises(ValueError):
-            Rectangle(2, -1, 2, 3)
-            Rectangle(2, 0, 2, 3)
+            Rectangle(2, -1)
+            Rectangle(2, 0)
         with self.assertRaises(TypeError):
             Rectangle(1, 'height', 2, 3)
             Rectangle(1, True, 2, 3)
@@ -190,6 +190,14 @@ class TestRectangle(unittest.TestCase):
 
     def test_save_to_file(self):
         """Testing save_to_file method for rectangle class"""
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            out = json.load(f)
+        self.assertEqual(out, [])
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            out = json.load(f)
+        self.assertEqual(out, [])
         r1 = Rectangle(10, 7, 2, 8)
         r2 = Rectangle(2, 4)
         Rectangle.save_to_file([r1, r2])
