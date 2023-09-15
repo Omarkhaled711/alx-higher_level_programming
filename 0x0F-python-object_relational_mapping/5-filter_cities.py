@@ -24,8 +24,9 @@ if __name__ == "__main__":
     query_rows = cur.fetchall()
     for index, row in enumerate(query_rows):
         if index == len(query_rows) - 1:
-            print(str(row).strip("('),"))
+            print(str(row).strip("('),"), end="")
         else:
             print(str(row).strip("('),"), end=", ")
+    print()
     cur.close()
     conn.close()
