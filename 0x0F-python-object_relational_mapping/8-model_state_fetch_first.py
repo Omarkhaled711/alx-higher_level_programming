@@ -18,4 +18,4 @@ if __name__ == "__main__":
     if results is None:
         print('Nothing')
     else:
-        print(results[0])
+        print(results)
