@@ -31,4 +31,9 @@ class State(Base):
     name = Column("name", String(128), nullable=False)
 
     def __init__(self, name):
+        """the constructor method"""
         self.name = name
+
+    def __str__(self):
+        """providing a way to display the results"""
+        return f'{self.id}: {self.name}'
