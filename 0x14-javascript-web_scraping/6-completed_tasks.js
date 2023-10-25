@@ -16,7 +16,7 @@ request.get(url, { json: true }, (err, response, body) => {
     current = info.userId;
     if (prevUser === -1) { prevUser = info.userId; }
     if (info.userId !== prevUser) {
-      ans[String(prevUser)] = count;
+      if (count !== 0) { ans[String(prevUser)] = count; }
       count = 0;
       prevUser = info.userId;
     }
@@ -24,6 +24,6 @@ request.get(url, { json: true }, (err, response, body) => {
       count += 1;
     }
   }
-  ans[current] = count;
+  if (count !== 0) { ans[String(current)] = count; }
   console.log(ans);
 });
