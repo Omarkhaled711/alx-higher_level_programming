@@ -5,7 +5,7 @@ const fs = require('fs');
 const url = process.argv[2];
 const file = process.argv[3];
 
-request.get(url, { json: true }, (err, response, body) => {
+request.get(url, (err, response, body) => {
   if (err) {
     console.error(err);
     return;
