@@ -8,22 +8,15 @@ request.get(url, { json: true }, (err, response, body) => {
     console.error(err);
     return;
   }
-  let count = 0;
-  let prevUser = -1;
-  let current = -1;
   const ans = {};
   for (const info of body) {
-    current = info.userId;
-    if (prevUser === -1) { prevUser = info.userId; }
-    if (info.userId !== prevUser) {
-      if (count !== 0) { ans[String(prevUser)] = count; }
-      count = 0;
-      prevUser = info.userId;
-    }
     if (info.completed === true) {
-      count += 1;
+      if (isNaN(ans[String(info.userId)])) {
+        ans[String(info.userId)] = 1;
+      } else {
+        ans[String(info.userId)] += 1;
+      }
     }
   }
-  if (count !== 0) { ans[String(current)] = count; }
   console.log(ans);
 });
